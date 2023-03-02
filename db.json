@@ -5,7 +5,10 @@
       "id": 21,
       "title": "ad et natus qui",
       "url": "https://via.placeholder.com/600/5e12c6",
-      "thumbnailUrl": "https://via.placeholder.com/150/5e12c6"
+      "thumbnailUrl": "https://via.placeholder.com/150/5e12c6",
+      "name": "deaa",
+      "breed": "deaa",
+      "image_url": "http://localhost:3000/pictures"
     },
     {
       "albumId": 1,
