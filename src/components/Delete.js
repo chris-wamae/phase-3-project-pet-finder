@@ -6,7 +6,7 @@ function Delete({pet}) {
   const pets = useStore(petsStore);
   const handleDelete = () => {
     axios
-      .delete(`https://philoxenia.onrender.com/pets/${pet.id}`)
+      .delete(`https://philoxenia.onrender.com/delete/pets/${pet.id}`)
       .then((r) =>
         r.status === 200
           ? axios
