@@ -7,6 +7,7 @@ import Search from "../components/Search";
 import axios from "axios";
 import { useState,useEffect } from "react";
 import AddPet from "../components/AddPet";
+import { Link } from "react-router-dom";
 
 function Mypets(){
 const myPets = useStore(petsStore);
@@ -21,6 +22,8 @@ axios.get("https://philoxenia.onrender.com/pets").then((r) => setPets(r.data));
 
 return(
     <>
+<Link exact to="/allpets"><p>View all pets</p></Link>
+<Link exact to="/"><p>Logout</p></Link>
 <Search/>
 <AddPet/>
 {
