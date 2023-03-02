@@ -6,7 +6,9 @@ import { useEffect } from "react";
 
 function Home() {
  // console.log(myPets);
-  return <></>;
+  return <>
+  <h1>Hi, welcome to Petfinder!</h1>
+  </>;
 }
 
 export default Home;
