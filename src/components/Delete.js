@@ -2,15 +2,15 @@ import axios from "axios";
 import { useStore } from "zustand";
 import { petsStore } from "../data/PetsStore";
 
-function Delete() {
+function Delete({pet}) {
   const pets = useStore(petsStore);
   const handleDelete = () => {
     axios
-      .delete("http://localhost:3000/pictures/19")
+      .delete(`https://philoxenia.onrender.com/pets/${pet.id}`)
       .then((r) =>
         r.status === 200
           ? axios
-              .get("http://localhost:3000/pictures")
+              .get("https://philoxenia.onrender.com/pets")
               .then((r) => pets.setPetsStore(r.data))
           : console.log(r.status)
       );
