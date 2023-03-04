@@ -5,7 +5,8 @@ import { petsStore } from "../data/PetsStore";
 function Search(){
 const pets = useStore(petsStore)
 const handleSearch = (e) => {
-axios.post(`http://0.0.0.0:9292/pets/search_all`,{
+    console.log(e.target.value)
+axios.post("https://wamae-pet-finder.onrender.com/pets/search_all",{
     query: e.target.value
 }).then( (r) =>
     pets.setPetsStore(r.data)
