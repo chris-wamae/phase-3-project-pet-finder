@@ -9,21 +9,20 @@ const [showForm,setShowForm] = useState(false)
 const [editPet, setEditPet] = useState({
 "name" : "",
 "breed" : "",
-"image_url" : ""
+"image_url" : "",
+"user_id" : pet.user_id
 })
 console.log(editPet)
 const handleSubmit = (e)  =>{
 e.preventDefault()
 setShowForm(false)
+let other_pets = pets.petsList.filter((thispet)=>{
+ return thispet.id !== pet.id
+})
+console.log(other_pets)
 axios
-.patch(`http://localhost:3000/pictures/21`,editPet)
-.then((r) =>
-//   r.status === 200
-//     ? axios
-//         .get("https://philoxenia.onrender.com/pets")
-//         .then((r) => pets.setPetsStore(r.data))
-//     : 
-console.log(r.status)
+.put(`https://wamae-pet-finder.onrender.com/pets/${pet.id}`,editPet)
+.then((r) => pets.setPetsStore([...other_pets, editPet])
 );
 }
 if(showForm === false){

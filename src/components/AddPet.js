@@ -9,15 +9,16 @@ function AddPet({user_id}){
     const [newPet, setNewPet] = useState({
     "name":"",
     "breed": "", 
-    "image": "",
+    "image_url": "",
     "user_id":user_id
     })
     //console.log(newPet)
     const handleSubmit = (e)  =>{
     e.preventDefault()
     setShowForm(false)
-    axios.post(`https://wamae-pet-finder.onrender.com/pets`,newPet).then((r) =>
-    pets.setPetsStore([...pets, r.data])
+    console.log(newPet)
+    axios.post(`https://wamae-pet-finder.onrender.com/pet`,newPet).then((r) =>
+    pets.setPetsStore([...pets.petsList, r.data])
 );
     }
 
@@ -34,7 +35,7 @@ function AddPet({user_id}){
         setNewPet({...newPet, "breed":e.target.value})
         }}></input>
         <input type="url" placeholder="Pet image url" onChange={(e) =>{
-        setNewPet({...newPet, "image":e.target.value})
+        setNewPet({...newPet, "image_url":e.target.value})
         }}></input>
         <button type="submit">Add</button>
         </form>

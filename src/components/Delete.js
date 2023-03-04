@@ -4,16 +4,13 @@ import { petsStore } from "../data/PetsStore";
 
 function Delete({pet}) {
   const pets = useStore(petsStore);
+  let other_pets = pets.petsList.filter((thispet)=>{
+    return thispet.id !== pet.id
+   })
   const handleDelete = () => {
     axios
-      .delete(`https://philoxenia.onrender.com/delete/pets/${pet.id}`)
-      .then((r) =>
-        r.status === 200
-          ? axios
-              .get("https://philoxenia.onrender.com/pets")
-              .then((r) => pets.setPetsStore(r.data))
-          : console.log(r.status)
-      );
+      .delete(`https://wamae-pet-finder.onrender.com/pets/${pet.id}`)
+      .then(() => pets.setPetsStore(other_pets));
   };
   return <button onClick={handleDelete}> Delete</button>;
 }
