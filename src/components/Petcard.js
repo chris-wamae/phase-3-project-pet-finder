@@ -8,7 +8,7 @@ function PetCard({pet}){
      return (
      <>
      <p key={pet.id}>{pet.name}</p>
-     <img src={pet.image}/>
+     <img src={pet.image_url}/>
      </>)
 }
 export default PetCard;

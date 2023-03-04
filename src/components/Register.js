@@ -13,11 +13,11 @@ function Register({changeForm}){
         changeForm()
     }
     return(
-        <div className="flex justify-center items-center">
-        <form onSubmit={handleSubmit} className=" bg-red-500 p-4 m-8 flex-col justify-center items-center w-72">
-            <input type="text" placeholder="username" className=" bg-red-500 text-center" onChange={(e) => setNewUser({...newUser,username:e.target.value})}></input>
-            <input type="password" placeholder="password" className=" bg-red-500 text-center" onChange={(e) => setNewUser({...newUser,password:e.target.value})}></input>
-            <button className="bg-red-500 ml-[5.7rem]">Register</button>
+        <div className="flex justify-center items-center ">
+        <form onSubmit={handleSubmit} className="p-4 m-8 flex-col justify-center items-center w-72 border-4 border-black bg-green-300">
+            <input type="text" placeholder="username" className="  text-center border-2 border-black" onChange={(e) => setNewUser({...newUser,username:e.target.value})}></input>
+            <input type="password" placeholder="password" className=" text-center border-2 border-black" onChange={(e) => setNewUser({...newUser,password:e.target.value})}></input>
+            <button className="border-2 bg-white text-black  hover:border-black hover:text-white hover:bg-red-300 mt-2 ml-[5.7rem]">Register</button>
         </form>
         </div>
     )
