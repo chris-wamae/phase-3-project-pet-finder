@@ -13,9 +13,9 @@ function Home() {
   }
 if(showRegister === true){
   return (<>
-    <h1>Hi, welcome to Petfinder!</h1>
+    <h1 className="text-6xl">Hi, welcome to Petfinder!</h1>
     <Register changeForm={changeForm}/>
-    <p>Already registered?<a onClick={changeForm}>Go to login</a></p>
+    <p className="text-center">Already registered?<a onClick={changeForm}>Go to login</a></p>
     </>);
 }else{
   return (<>

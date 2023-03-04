@@ -3,25 +3,21 @@ import axios from "axios"
 import { useStore } from "zustand"
 import { petsStore } from "../data/PetsStore"
 
-
-function AddPet(){
+function AddPet({user_id}){
     const pets = useStore(petsStore)
     const [showForm,setShowForm] = useState(false)
     const [newPet, setNewPet] = useState({
     "name":"",
     "breed": "", 
-    "image": ""
+    "image": "",
+    "user_id":user_id
     })
     //console.log(newPet)
     const handleSubmit = (e)  =>{
     e.preventDefault()
     setShowForm(false)
-    axios.post(`https://philoxenia.onrender.com/pets/create`,newPet).then((r) =>
-    r.status === 201
-    ? axios
-        .get("https://philoxenia.onrender.com/pets")
-        .then((r) => pets.setPetsStore(r.data))
-    : console.log(r.status)
+    axios.post(`https://wamae-pet-finder.onrender.com/pets`,newPet).then((r) =>
+    pets.setPetsStore([...pets, r.data])
 );
     }
 

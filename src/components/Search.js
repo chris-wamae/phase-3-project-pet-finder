@@ -5,7 +5,7 @@ import { petsStore } from "../data/PetsStore";
 function Search(){
 const pets = useStore(petsStore)
 const handleSearch = (e) => {
-axios.post(`https://philoxenia.onrender.com/pets/search`,{
+axios.post(`http://0.0.0.0:9292/pets/search_all`,{
     query: e.target.value
 }).then( (r) =>
     pets.setPetsStore(r.data)
