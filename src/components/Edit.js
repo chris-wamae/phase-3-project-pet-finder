@@ -26,7 +26,7 @@ axios
 );
 }
 if(showForm === false){
-    return <button 
+    return <button className="border-2 bg-green-300 text-black  hover:border-black hover:text-white hover:bg-black m-2" 
     onClick={() => setShowForm(true)
     }>Update pet</button>
 }else{

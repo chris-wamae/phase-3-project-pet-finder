@@ -6,9 +6,9 @@ import Delete from "./Delete";
 function PetCard({pet}){
     const pets = useStore(petsStore)
      return (
-     <>
-     <p key={pet.id}>{pet.name}</p>
-     <img src={pet.image_url}/>
-     </>)
+     <div className="flex flex-col items-center">
+     <p className="text-2xl font-bold" key={pet.id}>{pet.name}</p>
+     <img className="w-80" src={pet.image_url}/>
+     </div>)
 }
 export default PetCard;

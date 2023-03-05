@@ -20,8 +20,11 @@ axios.get("https://wamae-pet-finder.onrender.com/pets").then((r) => setMyPets(r.
     }, [myPets]); 
     return (<>
       {/* //<Link exact to="/mypets"><p>View my pets</p></Link> */}
-      <Link exact to="/"><p>Home</p></Link>
+      <div className="flex flex-row items-center justify-center bg-green-300">
+      <h1 className="text-4xl mr-4 ml-4">Petfinder</h1>
+      <Link exact to="/"><p className="text-center mr-4  text-blue-800 underline hover:text-red-800">Home</p></Link>
        <Search/>
+       </div>
        {/* <AddPet/> */}
        {pets.petsList.map((pet)=>{
      return <PetCard pet={pet}/>

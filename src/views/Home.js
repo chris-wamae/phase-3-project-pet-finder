@@ -19,7 +19,7 @@ if(showRegister === true){
     </>);
 }else{
   return (<>
-    <h1 className="text-6xl text-center">Petfinder</h1>
+    <h1 className="text-6xl text-center ">Petfinder</h1>
     <Login changeForm={changeForm}/>
     </>);
 }

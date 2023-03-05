@@ -25,19 +25,20 @@ function AddPet({user_id}){
     if(showForm === false){
         return <button 
         onClick={() => setShowForm(true)
-        }>Add new pet</button>
+        } className="text-center text-blue-800 underline hover:text-red-800 ml-8 ">Add new pet</button>
     }else{
-        return <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Pet name" onChange={(e) =>{
+        return <form onSubmit={handleSubmit} className="flex flex-col ml-8 mt-4">
+        <input className="text-center" type="text" placeholder="Pet name" onChange={(e) =>{
         setNewPet({...newPet, "name":e.target.value})
         }}></input>
-        <input type="text" placeholder="Pet breed" onChange={(e) =>{
+        <input className="text-center mt-1" type="text" placeholder="Pet breed" onChange={(e) =>{
         setNewPet({...newPet, "breed":e.target.value})
         }}></input>
-        <input type="url" placeholder="Pet image url" onChange={(e) =>{
+        <input className="text-center mt-1" type="url" placeholder="Pet image url" onChange={(e) =>{
         setNewPet({...newPet, "image_url":e.target.value})
         }}></input>
-        <button type="submit">Add</button>
+        <button type="submit" className="
+        border-2 m-2 bg-red-300 text-black  hover:border-black hover:text-white hover:bg-black" >Add</button>
         </form>
     }
 

@@ -30,8 +30,19 @@ function Login() {
     if(found_user[0].password === login.password){
     
       axios.get(`https://wamae-pet-finder.onrender.com/pets/${found_user[0].username}`).then((r) =>{
-      pets.setPetsStore(r.data) 
-      redirect("/mypets")}     
+      if(r.data.length === 0){
+        pets.setPetsStore([{
+        id:null,
+        name:"",
+        breed:"",
+        image_url:"",
+        user_id:found_user[0].id
+            }]) 
+            redirect("/mypets")}else{
+        console.log(r.data)
+        pets.setPetsStore(r.data) 
+        redirect("/mypets")} 
+      }    
       )
  
     }else{

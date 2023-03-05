@@ -12,7 +12,7 @@ function Delete({pet}) {
       .delete(`https://wamae-pet-finder.onrender.com/pets/${pet.id}`)
       .then(() => pets.setPetsStore(other_pets));
   };
-  return <button onClick={handleDelete}> Delete</button>;
+  return <button className="border-2 m-2 bg-green-300 text-black  hover:border-black hover:text-white hover:bg-black" onClick={handleDelete}> Delete</button>;
 }
 
 export default Delete;

@@ -13,7 +13,7 @@ axios.post("https://wamae-pet-finder.onrender.com/pets/search_all",{
 )
 } 
 return(
-<input type="text" placeholder="Search pet name or breed" onChange={handleSearch}></input>
+<input className="border-2 border-black text-center" type="text" placeholder="Search pet name or breed" onChange={handleSearch}></input>
 )
 }
 export default Search;
