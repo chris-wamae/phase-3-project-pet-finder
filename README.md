@@ -35,7 +35,7 @@ This application has been developed using the following technologies:
 This application is currently in development.
 
 ### Author and Licence
-<p>Author: [Chris Wamae](github.com/chris-wamae)</p>
-<p>Licence: This project is covered under the MIT licence</p>
+- Author: [Chris Wamae](github.com/chris-wamae)
+- Licence: This project is covered under the MIT licence
 
 
