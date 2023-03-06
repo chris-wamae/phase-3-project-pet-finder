@@ -13,8 +13,8 @@ To use the application on your local machine, the following dependancies are req
 - npm 6.14.14 and above
 - Vue 2.6.11- Status:
 - Version: - v0.1.0
-- Setup instructions
- After ensuring all the requirements are met, follow the following steps:
+
+After ensuring all the requirements are met, follow the following steps:
 - Open a terminal / command line interface on your computer
 - Clone the repo by using the following to create a copy on your local machine: https://github.com/chris-wamae/phase-3-project-pet-finder.git
 - Change directory to the repo folder:
