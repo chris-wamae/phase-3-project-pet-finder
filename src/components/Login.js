@@ -74,6 +74,7 @@ function Login() {
       })} className="  text-center border-2 border-black"></input>
       <button className="border-2 bg-white text-black  hover:border-black hover:text-white hover:bg-red-300 mt-2 ml-[5.7rem]">Login</button>
     </form>
+    
     </div>
   );
 }

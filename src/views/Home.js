@@ -21,6 +21,7 @@ if(showRegister === true){
   return (<>
     <h1 className="text-6xl text-center ">Petfinder</h1>
     <Login changeForm={changeForm}/>
+    <p className="text-center text-blue-800 underline hover:text-red-800 " onClick={changeForm}>Go back to registration</p>
     </>);
 }
 }
