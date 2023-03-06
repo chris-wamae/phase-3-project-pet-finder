@@ -34,6 +34,13 @@ This application has been developed using the following technologies:
 ### Application Status:
 This application is currently in development.
 
+### Application backend 
+The backend for this application is contained in the following repository
+
+<br>
+
+https://github.com/chris-wamae/phase-3-sinatra-react-project
+
 ### Author and Licence
 - Author: [Chris Wamae](github.com/chris-wamae)
 - Licence: This project is covered under the MIT licence
