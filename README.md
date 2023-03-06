@@ -1,7 +1,7 @@
 # phase-3-project-pet-finder
 <p>This application allows a user to add their pets and also view all the pets thta have been added. Users can 
 edit the pets they have added or delete them. To access the functionalities of the application, users must be registered and logged in to the application.<br></p>
-<p>To access the deployed application click on[this link](https://phase-3-project-pet-finder.vercel.app/) or copy and post this url in your browser:<br>
+<p>To access the deployed application click on [this link](https://phase-3-project-pet-finder.vercel.app) or copy and post this url in your browser:<br>
 https://phase-3-project-pet-finder.vercel.app/</p>
 
 <p>To use the application on your local machine, the following dependancies are required:
